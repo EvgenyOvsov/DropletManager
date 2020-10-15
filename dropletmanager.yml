@@ -1,0 +1,11 @@
+version: "2"
+services:
+  manager:
+    build:
+      context: .
+      dockerfile: manager.dockerfile
+    ports:
+    - "5002:5002"
+    volumes:
+    - "/root/.ssh:/root/.ssh:ro"
+    entrypoint: /opt/manager
